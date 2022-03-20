@@ -1,14 +1,14 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement, reset } from '../store/actions';
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { increment, decrement, reset } from '../store/actions'
 
 const App = () => {
-  const count = useSelector((state) => state);
-  const dispatch = useDispatch();
+  const count = useSelector((state) => state)
+  const dispatch = useDispatch()
 
-  const onDecrement = () => dispatch(decrement());
-  const onIncrement = () => dispatch(increment());
-  const onReset = () => dispatch(reset());
+  const onDecrement = () => dispatch(decrement())
+  const onIncrement = () => dispatch(increment())
+  const onReset = () => dispatch(reset())
 
   return (
     <div className="container">
@@ -26,7 +26,7 @@ const App = () => {
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
