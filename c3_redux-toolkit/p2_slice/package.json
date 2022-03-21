@@ -1,5 +1,5 @@
 {
-  "name": "redux-toolkit-configure-store",
+  "name": "redux-toolkit-slice",
   "scripts": {
     "start": "parcel index.html --open"
   },
