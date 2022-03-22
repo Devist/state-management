@@ -1,0 +1,20 @@
+{
+  "name": "redux-toolkit-async-thunk",
+  "scripts": {
+    "start": "concurrently \"json-server --watch ./db.json\" \"parcel index.html --open\""
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.8.0",
+    "babel-polyfill": "^6.26.0",
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^17.0.2",
+    "react-query": "^3.17.2",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "json-server": "^0.16.3",
+    "parcel-bundler": "^1.12.5"
+  }
+}
