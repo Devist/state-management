@@ -1,20 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
-import { getArticleList } from '../store/actions'
-
 const ArticleList = () => {
-  const dispatch = useDispatch()
-
-  const articles = useSelector((state) => state.articles)
-  const status = useSelector((state) => state.status)
-
-  const isSuccess = status !== 'PENDING' && status !== 'ERROR'
-
-  useEffect(() => {
-    dispatch(getArticleList())
-  }, [])
-
   return (
     <div className="container page">
       <div className="row">
