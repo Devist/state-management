@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
 
-import { createArticle } from '../store/actions'
+import { articleApi } from '../store/article'
 
 const Editor = () => {
-  const dispatch = useDispatch()
   const history = useHistory()
+
+  // articleList 와 다르게 작명이 다름을 알 수 있다.
+  // mutation이 붙은 건 튜플의 형태를 반환을 한다.
+  const [createArticle, { isLoading }] = articleApi.useCreateArticleMutation()
 
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
@@ -14,7 +16,7 @@ const Editor = () => {
   const onCreateArticle = async (e) => {
     e.preventDefault()
 
-    await dispatch(createArticle({ title, body }))
+    await createArticle({ title, body })
 
     history.push('/')
   }
@@ -47,6 +49,7 @@ const Editor = () => {
                 className="btn btn-lg pull-xs-right btn-primary"
                 type="button"
                 onClick={onCreateArticle}
+                disabled={isLoading}
               >
                 글 등록
               </button>

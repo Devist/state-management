@@ -1,7 +1,7 @@
 {
   "name": "redux-toolkit-rtk-query",
   "scripts": {
-    "start": "concurrently \"json-server --watch ../db.json\" \"parcel index.html --open\""
+    "start": "concurrently \"json-server --watch ./db.json\" \"parcel index.html --open\""
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.0",
